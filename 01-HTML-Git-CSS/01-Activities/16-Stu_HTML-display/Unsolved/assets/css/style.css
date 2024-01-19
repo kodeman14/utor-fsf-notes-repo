@@ -1,0 +1,66 @@
+header {
+  width: 100%;
+  background-color: lightblue;
+}
+
+h2 {
+  text-align: left;
+}
+
+ul {
+  text-align: center;
+  color: #ffffff;
+  width: 60%;
+  margin: auto;
+  padding-left: 0px;
+}
+
+/* List items in navigation bar */
+li {
+  /* TODO: Add your code here */
+  display: inline;
+  list-style-type: none;
+  font-size: 40px;
+}
+
+/* Boxes */
+img {
+  /* TODO: Add your code here */
+  margin: 0 auto;
+  display: block;
+}
+
+#item-1 {
+  background-color: #e0115f;
+}
+
+#item-2 {
+  background-color: #0000ff;
+}
+
+#item-3 {
+  background-color: #999900;
+}
+
+/* Box 3 */
+#image-3 {
+  /* TODO: Add your code here */
+
+  /* background-color: #0000ff; */
+  /* padding: 30px; */
+}
+
+/* Sets display of all elements with class selector to block */
+.display-block {
+  display: block;
+}
+
+/* Sets display of all elements with class selector to inline */
+.display-inline {
+  display: inline;
+}
+
+/* Sets display of all elements with class selector to inline */
+.display-none {
+  display: none;
+}

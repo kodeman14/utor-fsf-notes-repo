@@ -1,0 +1,19 @@
+section {
+  width: 600px;
+  height: 600px;
+  text-align: center;
+  border: 15px solid black;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+  padding: 20px;
+  border: 9px solid darkblue;
+  margin: 20px;
+  /* display: block; */
+  /* TODO: Add a margin property */
+  /* TODO: Add a padding property */
+  /* TODO: Add a border property */
+}
