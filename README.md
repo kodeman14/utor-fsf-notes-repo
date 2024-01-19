@@ -1,3 +1,3 @@
-# UTOR-FSF-BC-DEC23
+# UTOR-FSF-NOTES-REPO
 
-temporary code repo for students to pull content for the bootcamp
+supplemental repo for notes made during class time
