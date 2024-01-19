@@ -1,0 +1,118 @@
+/* TODO: Set the font size and line height */
+body {
+  display: flex;
+  font-size: 16px;
+  /* line-height: 1.5; */
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1%;
+  background-color: #13293d;
+  color: #fff;
+}
+
+/* TODO: Change the heading size to 200%, give it a margin all around, and assign font family to serif */
+h1 {
+  font-size: 200%;
+  font-family: serif;
+  margin: 4%;
+}
+
+/* TODO: Change the heading size to be slightly smaller than h1, give it a margin only on the top and bottom, and assign font family to serif */
+h2 {
+  font-size: 150%;
+  font-family: serif;
+  /* margin-top: 3%;
+  margin-bottom: 3%; */
+  margin: 3% 0;
+}
+
+/* TODO: Change header size to be slightly smaller than h2 and assign font family to serif */
+h3 {
+  font-size: 100%;
+  font-family: serif;
+}
+
+/* h1, h2, h3 {
+  font-family: serif;
+} */
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  min-width: 300px;
+}
+
+nav a {
+  color: #b9c6ae;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+main {
+  display: flex;
+  flex: 1 1 0;
+  max-width: 1200px;
+  margin: 2% auto;
+}
+
+section {
+  flex: 1 1 0;
+  padding-right: 5%;
+}
+
+article {
+  border-bottom: 1px solid #d8a47f;
+}
+
+/* TODO: Add a margin to the top and bottom of the paragraphs */
+article p {
+  line-height: 1.5;
+  margin: 3% auto;
+}
+
+/* TODO: Add a margin to indent the list, give it square bullet points, and assign font family to monospace */
+article ul {
+  font-family: monospace;
+  list-style-type: square;
+  margin: 3%;
+}
+
+aside {
+  width: 25%;
+}
+
+input,
+button {
+  width: 100%;
+  margin: 2% 0;
+  padding: 1%;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 2%;
+  background-color: #13293d;
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  header,
+  main {
+    flex-direction: column;
+  }
+
+  section {
+    padding-right: 0;
+  }
+
+  aside {
+    width: 100%;
+    text-align: center;
+  }
+}
