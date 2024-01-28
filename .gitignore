@@ -1,1 +1,12 @@
+#misc
 .DS_Store
+.env
+
+#files
+**/Solved
+**/02-Challenge
+**/03-Algorithms
+
+#npm
+**/node_modules/
+**/package-lock.json
