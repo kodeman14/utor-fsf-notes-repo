@@ -45,7 +45,7 @@ function renderLetters() {
     // Assign style to the button
     letterBtn.addClass("letter-button btn btn-info");
     // Assign the letter to the data-letter attribute
-    letterBtn.attr("data-ankit", letters[i]);
+    letterBtn.attr("data-letter", letters[i]);
     // Display the letter
     letterBtn.text(letters[i]);
     // Attach the letter element
@@ -62,7 +62,7 @@ alphabetBtnsEl.on("click", ".letter-button", function (event) {
   console.log($(event.target));
 
   // get letter from clicked letter button's `data-letter` attribute and use it for display
-  displayLetterEl.text($(event.target).attr("data-ankit"));
+  displayLetterEl.text($(event.target).attr("data-letter"));
   // event.target -> specific button
   // .attr -> providing/checking attribute
   // .text -> giving/setting a text value
