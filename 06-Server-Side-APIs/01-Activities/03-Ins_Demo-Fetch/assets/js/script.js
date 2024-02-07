@@ -15,7 +15,7 @@ function getApi() {
     .then(function (response) {
       console.log(response);
       return response.json();
-    }); // convert response to json and send it to next ieration
+    }); // convert response to json and send it to next iteration
 
   // console.log(fetchApiRequest);
 
