@@ -1,0 +1,6 @@
+{
+  "title": "JavaScript Promises",
+  "text": "The benefits of using promises compared to callbacks include improved code readability, better error handling, and they are compatible with the newer `async/await` syntax. Promises can be in one of four states: \"fulfilled\", \"rejected\", \"ending\", and \"settled\".",
+  "author": "Lernantino",
+  "createdOn": "2022-08-17T23:01:52.846Z"
+}

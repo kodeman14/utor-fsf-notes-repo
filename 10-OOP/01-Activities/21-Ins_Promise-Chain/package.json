@@ -1,0 +1,16 @@
+{
+  "name": "21-Ins_Promise-Chain",
+  "version": "1.0.0",
+  "description": "",
+  "main": "shape.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Fluffykins",
+    "age": "4",
+    "description": "A cat that acts like a dog",
+    "image_url": "http://placekitten.com/300/180"
+  },
+  {
+    "name": "Walter",
+    "age": "5",
+    "description": "The best boy",
+    "image_url": "http://placekitten.com/250"
+  },
+  {
+    "name": "Zero",
+    "age": "1",
+    "description": "A kind soul",
+    "image_url": "http://placekitten.com/260"
+  },
+  {
+    "name": "Clemintine",
+    "age": "2",
+    "description": "Likes to cuddle",
+    "image_url": "http://placekitten.com/350"
+  }
+]
