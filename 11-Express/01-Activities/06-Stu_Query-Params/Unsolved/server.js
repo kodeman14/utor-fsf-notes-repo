@@ -1,28 +1,38 @@
-const express = require('express');
+const express = require("express");
 // Helper function to sort our data in ascending and descending order
-const { sortData } = require('./sortData');
-const termData = require('./terms.json');
+// const { sortData } = require("./sortData");
+const sortData = require("./sortData");
+const termData = require("./terms.json");
 
 const PORT = 3001;
 
 const app = express();
 
 const sortHelper = (type) =>
-  termData.sort(sortData('term', 'relevance', `${type}`));
+  termData.sort(sortData("term", "relevance", `${type}`));
+
+// req.params.id / req.query.sort
+// const { params, query } = req
+// const { id } = params
+// const { sort } = query
 
 // TODO: Add a comment describing the functionality of this route
 
-app.get('/api/terms/', (req, res) => {
+app.get("/api/terms/", (req, res) => {
   // TODO: Add a comment describing the req.query object
-
+  // using query, not params (on req object)
   const hasQuery = Object.keys(req.query).length > 0;
 
-  if (hasQuery && req.query.sort === 'dsc') {
-    return res.json(sortHelper('dsc'));
+  if (hasQuery && req.query.sort === "dsc") {
+    return res.json(sortHelper("dsc"));
   }
 
-  if (hasQuery && req.query.sort === 'asc') {
-    return res.json(sortHelper('asc'));
+  if (hasQuery && req.query.sort === "asc") {
+    return res.json(sortHelper("asc"));
+  }
+
+  if (hasQuery && req.query.something) {
+    return res.json(JSON.stringify(termData));
   }
 
   // If there is no query parameter, return terms
@@ -31,7 +41,7 @@ app.get('/api/terms/', (req, res) => {
 
 // TODO: Add a comment describing what this route will return
 
-app.get('/api/term/:term', (req, res) => {
+app.get("/api/term/:term", (req, res) => {
   // TODO: Add a comment describing the content of req.params in this instance
 
   const requestedTerm = req.params.term.toLowerCase();
@@ -43,13 +53,13 @@ app.get('/api/term/:term', (req, res) => {
   }
 
   // Return a message if the term doesn't exist in our DB
-  return res.json('No term found');
+  return res.json("No term found");
 });
 
 // TODO: Add a comment describing what this route will return
 
-app.get('/api/terms/:category', (req, res) => {
-  const requestedCategory = req.params.category.toLowerCase();
+app.get("/api/terms/:cat", (req, res) => {
+  const requestedCategory = req.params.cat.toLowerCase();
   const result = [];
 
   for (let i = 0; i < termData.length; i++) {
@@ -63,10 +73,10 @@ app.get('/api/terms/:category', (req, res) => {
 
 // TODO: Add a comment describing what this route will return
 
-app.get('/api/categories', (req, res) => {
+app.get("/api/categories", (req, res) => {
   const categories = termData.map((term) => term.category);
 
-  const result = categories.filter((cat, i) => categories.indexOf(cat) === i);
+  const result = categories.filter((cat, i) => categories.indexOf(cat) === i); 
 
   return res.json(result);
 });

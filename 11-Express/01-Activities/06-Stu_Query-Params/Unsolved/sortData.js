@@ -1,7 +1,7 @@
 // Helper function to sort data based on key and type
 const sortData = (firstKey, secondKey, type) => {
   switch (type) {
-    case 'asc': {
+    case "asc": {
       return (a, b) => {
         if (a[firstKey] < b[firstKey]) {
           return -1;
@@ -19,7 +19,7 @@ const sortData = (firstKey, secondKey, type) => {
         return 0;
       };
     }
-    case 'dsc': {
+    case "dsc": {
       return (a, b) => {
         if (a[firstKey] > b[firstKey]) {
           return -1;
@@ -41,4 +41,5 @@ const sortData = (firstKey, secondKey, type) => {
       return undefined;
   }
 };
-exports.sortData = sortData;
+// exports.sortData = sortData;
+module.exports = sortData;

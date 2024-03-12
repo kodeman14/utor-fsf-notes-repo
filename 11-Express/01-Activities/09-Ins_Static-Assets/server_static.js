@@ -1,7 +1,9 @@
+// note: separate out "require" and regular variables
 const express = require('express');
+const path = require('path');
+
 const app = express();
 const PORT = 3001;
-const path = require('path');
 
 // Creates individual routes for every static asset
 // Note: Not good practice - Very painstaking

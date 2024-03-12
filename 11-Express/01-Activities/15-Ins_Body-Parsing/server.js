@@ -1,7 +1,7 @@
-const express = require('express');
+const express = require("express");
 
 const PORT = 3001;
-const reviews = require('./db/reviews');
+const reviews = require("./db/reviews");
 
 const app = express();
 
@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // GET request for ALL reviews
-app.get('/api/reviews', (req, res) => {
+app.get("/api/reviews", (req, res) => {
   // Log our request to the terminal
   console.info(`${req.method} request received to get reviews`);
 
@@ -19,7 +19,7 @@ app.get('/api/reviews', (req, res) => {
 });
 
 // POST request to add a review
-app.post('/api/reviews', (req, res) => {
+app.post("/api/reviews", (req, res) => {
   // Log that a POST request was received
   console.info(`${req.method} request received to add a review`);
 
@@ -27,14 +27,20 @@ app.post('/api/reviews', (req, res) => {
   let response;
 
   // Check if there is anything in the response body
-  if (req.body && req.body.product) {
+  if (
+    req.body &&
+    req.body.product &&
+    req.body.product.length > 2 &&
+    req.body.rating > -1
+  ) {
     response = {
-      status: 'success',
+      status: "success",
       data: req.body,
     };
-    res.json(`Review for ${response.data.product} has been added!`);
+    res.json(`Review for ${JSON.stringify(response.data)} has been added!`);
+    // right now, we're not adding to the reviews js file (yet)
   } else {
-    res.json('Request body must at least contain a product name');
+    res.json("Something is wrong with the response you have added");
   }
 
   // Log the response body to the console

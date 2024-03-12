@@ -9,9 +9,9 @@ const app = express();
 app.get('/api/terms', (req, res) => res.json(termData));
 
 // GET route that returns any specific term
-app.get('/api/terms/:term', (req, res) => {
+app.get('/api/terms/:id', (req, res) => {
   // Coerce the specific search term to lowercase
-  const requestedTerm = req.params.term.toLowerCase();
+  const requestedTerm = req.params.id.toLowerCase();
 
   // Iterate through the terms name to check if it matches `req.params.term`
   for (let i = 0; i < termData.length; i++) {
