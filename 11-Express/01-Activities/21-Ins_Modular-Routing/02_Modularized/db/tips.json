@@ -16,5 +16,17 @@
         "tip": "Don't use three different fonts on the same page",
         "topic": "UX",
         "tip_id": "0a46"
+    },
+    {
+        "username": "anon",
+        "tip": "new hot tip",
+        "topic": "UX",
+        "tip_id": "61a1"
+    },
+    {
+        "username": "test",
+        "tip": "hello",
+        "topic": "UX",
+        "tip_id": "fa1c"
     }
 ]

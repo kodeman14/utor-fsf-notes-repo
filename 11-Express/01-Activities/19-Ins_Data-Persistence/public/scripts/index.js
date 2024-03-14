@@ -1,6 +1,7 @@
 const userNameInput = document.getElementById('username');
 const productInput = document.getElementById('product');
 const reviewInput = document.getElementById('review');
+const commentInput = document.getElementById('comment');
 const reviewForm = document.getElementById('review-form');
 
 // Helper function that accepts a `review` object, sends a POST request and returns the result
@@ -31,6 +32,7 @@ reviewForm.addEventListener('submit', (e) => {
     username: userNameInput.value.trim(),
     product: productInput.value.trim(),
     review: reviewInput.value.trim(),
+    comment: commentInput.value.trim(),
   };
 
   // Call our postReview method to make a POST request with our `newReview` object.

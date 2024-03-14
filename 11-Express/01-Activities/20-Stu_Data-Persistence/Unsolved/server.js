@@ -44,17 +44,29 @@ app.post('/api/reviews', (req, res) => {
       review_id: uuid(),
     };
 
-    // Convert the data to a string so we can save it
-    const reviewString = JSON.stringify(newReview);
+    // PSEUDOCODE ->
+    // read the file first (data type = array)
+    // this gives us the existing reviews
+    // do a push on the existing reviews
+    // this will give us a new array
+    // convert this array to a string
+    // write the same file with new string
 
-    // Write the string to a file
-    fs.writeFile(`./db/reviews.json`, reviewString, (err) =>
-      err
-        ? console.error(err)
-        : console.log(
-            `Review for ${newReview.product} has been written to JSON file`
-          )
-    );
+    fs.readFile("", "", () => {
+      // TODO: whatever data manipulation is needed
+
+      // Convert the data to a string so we can save it
+      const reviewString = JSON.stringify(newReview);
+  
+      // Write the string to a file
+      fs.writeFile(`./db/reviews.json`, reviewString, (err) =>
+        err
+          ? console.error(err)
+          : console.log(
+              `Review for ${newReview.product} has been written to JSON file`
+            )
+      );
+    })
 
     const response = {
       status: 'success',

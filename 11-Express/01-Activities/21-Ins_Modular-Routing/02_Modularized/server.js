@@ -2,7 +2,8 @@ const express = require('express');
 const path = require('path');
 
 // Import the feedback router
-const api = require('./routes/index');
+// const index = require('./routes/index');
+const index = require('./routes');
 
 const PORT = 3001;
 
@@ -16,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
 // Send all the requests that begin with /api to the index.js in the routes folder
-app.use('/api', api);
+app.use('/api', index);
 
 // This view route is a GET route for the homepage
 app.get('/', (req, res) =>

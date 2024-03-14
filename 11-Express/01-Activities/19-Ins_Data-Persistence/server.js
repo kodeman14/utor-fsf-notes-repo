@@ -32,7 +32,7 @@ app.post('/api/reviews', (req, res) => {
   console.info(`${req.method} request received to add a review`);
 
   // Destructuring assignment for the items in req.body
-  const { product, review, username } = req.body;
+  const { product, review, username, comment } = req.body;
 
   // If all the required properties are present
   if (product && review && username) {
@@ -41,6 +41,7 @@ app.post('/api/reviews', (req, res) => {
       product,
       review,
       username,
+      comment,
       upvotes: Math.floor(Math.random() * 100),
       review_id: uuid(),
     };
@@ -49,7 +50,7 @@ app.post('/api/reviews', (req, res) => {
     const reviewString = JSON.stringify(newReview);
 
     // Write the string to a file
-    fs.writeFile(`./db/${newReview.product}.json`, reviewString, (err) =>
+    fs.appendFile(`./db/${newReview.username}.json`, reviewString, (err) =>
       err
         ? console.error(err)
         : console.log(
