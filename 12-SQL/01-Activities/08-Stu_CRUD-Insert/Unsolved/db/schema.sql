@@ -5,6 +5,7 @@ USE books_db;
 
 CREATE TABLE biographies (
   id INT NOT NULL,
-  name VARCHAR(100) NOT NULL
+  name VARCHAR(100) NOT NULL,
+  desc VARCHAR(500)
 );
 

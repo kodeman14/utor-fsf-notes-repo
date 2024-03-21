@@ -5,3 +5,8 @@ VALUES
     ( 003, "Long Walk to Freedom");
 
 SELECT * FROM biographies;
+-- * => targets all the data
+-- id => just the id column
+
+-- TODO: only print out id + name
+SELECT id, name FROM biographies;
