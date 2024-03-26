@@ -1,0 +1,11 @@
+DROP DATABASE IF EXISTS library_db;
+CREATE DATABASE library_db;
+
+CREATE TABLE books {
+  id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  title TEXT,
+  author VARCHAR(30),
+  pages INT,
+  is_paperback BOOLEAN
+  created_at DATE DEFAULT CURRENT_TIMESTAMP
+}
