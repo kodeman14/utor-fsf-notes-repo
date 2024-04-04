@@ -20,7 +20,8 @@ const aryaParents = arya.parents;
 
 // Now with ES6 object destructuring syntax, we can do this:
 
-const { parents, fName } = jaime;
+const { parents: pJaime, fName: nameJaime } = jaime;
+const { parents: pArya, fName: nameArya } = arya;
 // const { fName: fName, parents: parents } = jaime;
 
 console.log(fName); // logs `"Jaime Lannister"`

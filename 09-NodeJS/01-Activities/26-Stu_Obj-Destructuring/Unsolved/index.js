@@ -29,8 +29,8 @@ const js = {
 // TODO: Destructure the nested object 'js'
 const { name, type, version, tools } = js;
 const { frameworks, libraries } = tools;
-const { framework1, framework2 } = frameworks;
-const { library1, library2 } = libraries;
+const { framework1: f1, framework2: f2 } = frameworks;
+const { library1: f3, library2: f4 } = libraries;
 
 // const { framework1, framework2 } = js.tools.frameworks;
 // js.tools.frameworks, js.tools.frameworks
