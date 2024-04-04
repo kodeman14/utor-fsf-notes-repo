@@ -13,6 +13,8 @@ console.log(add(1, 100)); // => 3
 
 // function add(...nums) {
 //   let sum = 0;
+//   // "nums" is treated as an array here
+//   // so we can loop through the array
 //   console.log("nums", nums, nums[0]);
 //   // for (let num of nums) sum += num;
 //   nums.forEach((num) => (sum += num));
@@ -40,6 +42,19 @@ function howManyArgs(...args) {
 const dragons = ["Drogon", "Viserion", "Rhaegal"];
 const weapons1 = ["dragonglass", "wildfire", ...dragons]; // notice the spread operator ...dragons
 const weapons2 = ["dragonglass", dragons, "wildfire"]; // notice the spread operator ...dragons
+
+console.log(dragons) // [b,c,d] -> length = 3
+
+// with ...dragons
+console.log(weapons)
+// [a,b,c,d,e]
+// length = 5
+
+// with dragons
+console.log(weapons)
+// [a,dragons,e]
+// [a,[b,c,d],e]
+// length = 3
 
 // Uncomment below to see how spread operators work!
 // console.log(weapons); // prints ["dragonglass", "Drogon", "Viserion", "Rhaegal", "wildfire"]
