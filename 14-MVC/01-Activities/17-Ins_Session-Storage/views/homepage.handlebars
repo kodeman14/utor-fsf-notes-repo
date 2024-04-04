@@ -1,0 +1,9 @@
+{{!-- TODO : ANKIT REVIEW HOMEPAGE LOGIN --}}
+{{#each galleries as |gallery|}}
+  <header>{{name}}</header>
+  {{#if ../loggedIn}}
+    {{> gallery-details}}
+  {{else}}
+    <a href="/login">You must login first to view this image</a>
+  {{/if}}
+{{/each}}

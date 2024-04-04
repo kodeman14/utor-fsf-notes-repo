@@ -1,0 +1,13 @@
+<section class="painting">
+  <img src="/images/{{painting.filename}}" alt="{{painting.description}}">
+  <div class="painting-details">
+    <h3>{{painting.title}}</h3>
+    <p>Created By: {{painting.artist}}</p>
+    <p>Belongs To: Gallery #{{painting.gallery_id}}</p>
+    {{#if painting.description}}
+    <p>Description: {{painting.description}}</p>
+    {{else}}
+    <p>Description: No description found</p>
+    {{/if}}
+  </div>
+</section>
