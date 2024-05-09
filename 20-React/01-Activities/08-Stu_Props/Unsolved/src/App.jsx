@@ -1,7 +1,7 @@
 import Display from "./components/Display";
 
-function App() {
-  return <Display />;
+export default function App() {
+  return <Display propKey={'propValue'} />;
 }
 
-export default App;
+// export default App;

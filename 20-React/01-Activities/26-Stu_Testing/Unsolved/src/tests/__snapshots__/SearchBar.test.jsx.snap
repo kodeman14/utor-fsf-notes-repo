@@ -1,0 +1,17 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`SearchBar > should render and match snapshot 1`] = `
+"<div class=\\"search-bar ui segment\\">
+  <form class=\\"ui form\\">
+    <div class=\\"field\\"><label>Retrieve GitHub Issues</label><input type=\\"text\\" placeholder=\\"facebook/react\\" value=\\"microsoft/vscode\\"></div>
+  </form>
+</div>"
+`;
+
+exports[`SearchBar should render and match snapshot 1`] = `
+"<div class=\\"search-bar ui segment\\">
+  <form class=\\"ui form\\">
+    <div class=\\"field\\"><label>Retrieve GitHub Issues</label><input type=\\"text\\" placeholder=\\"facebook/react\\" value=\\"microsoft/vscode\\"></div>
+  </form>
+</div>"
+`;
