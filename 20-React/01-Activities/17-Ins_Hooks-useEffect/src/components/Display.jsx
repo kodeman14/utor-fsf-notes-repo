@@ -24,8 +24,10 @@ export default function Display() {
 
   useEffect(() => {
     console.log("only triggered on isCleared state change", isCleared);
-    // });
   }, [isCleared]);
+
+  // if we're here, this will run on ANY render
+  // console.log('display this')
 
   const handleIncrease = () => {
     setCount(count + 1);
