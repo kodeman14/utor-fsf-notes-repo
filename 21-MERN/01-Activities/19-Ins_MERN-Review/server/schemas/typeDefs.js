@@ -5,12 +5,23 @@ const typeDefs = `
     skills: [String]!
   }
 
+  type ProfileSkills {
+    _id: ID
+    skills: [String]!
+  }
+
+  # modify and play around with to get it working
+  type ProfileResponse {
+    success: Boolean
+    profile: Profile
+  }
+
   # Important for useQuery: We define our Query type to inform our entry points
   # The Query type is built-in to GraphQL, so we only need to extend it to include which kinds of information we plan to request in our application
   type Query {
     profiles: [Profile]!
     # Important for Query Variables: The profile query field allows us to fetch the specific Profile data by using the profileId argument and providing a non-null ID value as the argument value
-    profile(profileId: ID!): Profile
+    profile(profId: ID!): Profile
   }
 
   # Important for useMutation: We define our Mutation type to inform our entrypoints

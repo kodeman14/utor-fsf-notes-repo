@@ -14,8 +14,8 @@ export const QUERY_PROFILES = gql`
 
 // Important for Query Variables: To successfully execute this GraphQL query, you would need to provide a non-null ID value for the profileId argument. This value is passed using the $profileId variable, which represents the placeholder for the actual value in the query.
 export const QUERY_SINGLE_PROFILE = gql`
-  query singleProfile($profileId: ID!) {
-    profile(profileId: $profileId) {
+  query singleProfile($idProfile: ID!) {
+    profile(profId: $idProfile) {
       _id
       name
       skills
