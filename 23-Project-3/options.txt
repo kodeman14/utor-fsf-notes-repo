@@ -1,0 +1,27 @@
+front end = react -> jsx
+back end = node + express -> js
+
+database =
+
+1. SQL ->
+  - not much to do on front end side
+  - makes requests through fetch/axios
+  - uses sequelize on the backend (orm)
+  - works with a relational database
+  - works with postman/insomnia (has routes)
+
+2. MongoDB ->
+  - not much to do on front end side
+  - makes requests through fetch/axios
+  - uses mongoose on the backend (orm)
+  - works as a non relatinal database
+  - works with postman/insomnia (has routes)
+
+3. GraphQL -> 
+  - set up on the front end (apollo client)
+    - queries, mutations, hooks for requests
+  - set up on the back end (apollo server)
+    - typedefs, resolvers, setup
+  - uses mongoose on the backend (orm)
+  - works as a non relational database
+  - won't work with postman (no routes)

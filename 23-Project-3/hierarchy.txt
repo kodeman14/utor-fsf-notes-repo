@@ -1,0 +1,140 @@
+1. mern setup (graphql) ->
+
+- client/ (react/apollo)
+  - public/ (for running a build/hosting)
+    - icons.png
+    - icons.svg
+  - src/ (main folder for react to reference)
+    - assets/ (any images that your app wants to use)
+    - components/ (fragments that don't have their own routes)
+      - List/
+        - List.jsx (logic that only applies to List component)
+        - List.css (styling that only applies to List component)
+      - ProfileForm.jsx
+      - LoginForm.jsx
+      - SignupForm.jsx
+      - Header.jsx
+      - Footer.jsx
+      - etc
+    - pages/ (have their own routes and are standalone)
+      - Home.jsx
+      - Profile.jsx
+      - Categories.jsx
+      - Login.jsx
+      - Signup.jsx
+      - Error.jsx
+      - etc
+    - utils/ (that would contain your apollo creations)
+      - gql/
+        - queries.js (writing your queries in gql)
+        - mutations.js (writing your mutations in gql)
+      - store
+        - context.jsx (contains global state for the app)
+        - resolvers.js + actions.js
+    - App.css (css styles for the entire application)
+    - App.jsx (container/wrapper for the whole app)
+      - apollo wrapper
+      - state provider
+      - page setup (header/footer)
+      - outlet (for page/path switching)
+      - import bootstrap from package
+    - main.jsx (interaction with the index.html)
+      - router (browserRouter)
+      - render (createRoot)
+      - wrapper around <App />
+      - router wrapper
+  - index.html (for browser compilations)
+    - contains id (#root) for main.jsx
+  - package.json (vite/apollo/router/bootstrap)
+- server/ (node/express)
+  - config/ (connection/db name)
+    - connection.js
+  - models/ (structure of the dataset)
+    - index.js
+    - model1.js
+    - model2.js
+  - seeds/ (any starting data for your app)
+    - seeds1.js
+    - cleardb.js
+  - schemas/ (contain info for apollo to reference)
+    - typedefs (table or query or mutation definitions)
+    - resolvers (logic to interact with db through mongoose)
+  - server/index.js (set up/run app)
+  - package.json (mongoose/apollo)
+  - .env + eslint + tests
+- package.json (concurrently/scripts)
+
+-----
+
+2. sern (sequelize/mysql) ->
+
+- client/ (react/axios)
+  - public/ (for running a build/hosting)
+    - icons.png
+    - icons.svg
+  - src/ (main folder for react to reference)
+    - assets/ (any images that your app wants to use)
+    - components/ (fragments that don't have their own routes)
+      - List/
+        - List.jsx (logic that only applies to List component)
+        - List.css (styling that only applies to List component)
+      - ProfileForm.jsx
+      - LoginForm.jsx
+          const [data, setData] = useState()
+          function handleSubmit() {
+            // some data to send
+            // apiFetchCallPost(data)
+          }
+      - SignupForm.jsx
+      - Header.jsx
+      - Footer.jsx
+      - etc
+    - pages/ (have their own routes and are standalone)
+      - Home.jsx
+      - Profile.jsx
+      - Categories.jsx
+      - Login.jsx
+      - Signup.jsx
+      - Error.jsx
+      - etc
+    - utils/ (fetch requests to the api)
+      - api/
+        - api.js (api url, different routes)
+            function apiFetchCallPost (info) {
+              // fetch.post('/api/signup', () => info)
+            }
+      - store/
+        - context.jsx (contains global state for the app)
+        - resolvers.js + actions.js
+    - App.css (css styles for the entire application)
+    - App.jsx (container/wrapper for the whole app)
+      - state provider
+      - page setup (header/footer)
+      - outlet (for page/path switching)
+      - import bootstrap from package
+    - main.jsx (interaction with the index.html)
+      - router (browserRouter)
+      - render (createRoot)
+      - wrapper around <App />
+      - router wrapper
+  - index.html (for browser compilations)
+    - contains id (#root) for main.jsx
+  - package.json (vite/router/bootstrap/axios)
+- server/ (node/express)
+  - config/ (connection/db name)
+    - connection.js
+  - models/ (structure is of utmost importance)
+    - index.js
+    - model1.js
+    - model2.js
+  - seeds/ (any starting data for your app)
+    - seeds1.js
+    - cleardb.js
+  - routes (specific routes for each function)
+    - user-routes.js (login/signup/profile)
+    - category-routes.js (crud operations)
+    - index.js ()
+  - server/index.js (set up/run app)
+  - package.json (sequelize/mysql)
+  - .env + eslint + tests
+- package.json (concurrently/scripts)
