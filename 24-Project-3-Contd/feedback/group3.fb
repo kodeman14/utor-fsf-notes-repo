@@ -1,0 +1,28 @@
+likes
+- good job relating to personal experience
+- important to figure out backend first
+- the event view page looks good
+- really like the event countdown
+
+dislikes
+- the ui should be a bit more polished
+
+suggestions
+- error management is super important, you can get more specific with where the errors are coming form
+- for password, make sure you have a "confirm password" on signup screen (not login)
+- event cards should have some date/time associated with it, instead of going to the separate page for it
+- maybe ask users if they want their data to be displayed on the public space
+
+improvements
+- this should've been built mobile first
+
+questions
+- what were some of your learnings from referencing
+
+-----
+
+going: first
+team: james, hement
+
+time => 7:32-8:23
+grade => 70
